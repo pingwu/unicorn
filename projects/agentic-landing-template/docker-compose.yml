@@ -1,0 +1,68 @@
+# Agentic Landing Template - Docker Compose
+# Primary workflow: develop → containerize → deploy
+#
+# Commands:
+#   npm run docker:dev   - Development with hot-reload (default)
+#   npm run docker:prod  - Test production build locally
+#   npm run docker:prod  - Test production build locally
+
+services:
+  # ============================================================
+  # DEV - Hot-reload development (PRIMARY)
+  # ============================================================
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      - WATCHPACK_POLLING=true
+    command: sh -c "npm install && npm run dev"
+    networks:
+      - app-network
+    profiles:
+      - dev
+
+  # ============================================================
+  # APP - Production build preview
+  # ============================================================
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - app-network
+    profiles:
+      - prod
+
+# ============================================================
+# VOLUMES - Persistent storage
+# ============================================================
+volumes:
+  node_modules:
+    name: agentic-landing-node-modules
+
+# ============================================================
+# NETWORKS
+# ============================================================
+networks:
+  app-network:
+    driver: bridge

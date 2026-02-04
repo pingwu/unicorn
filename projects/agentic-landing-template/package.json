@@ -1,0 +1,61 @@
+{
+  "name": "agentic-landing-template",
+  "version": "1.0.0",
+  "description": "Customizable landing page template for AI-assisted development with Gemini CLI or Claude Code",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "docker:dev": "UID=$(id -u) GID=$(id -g) docker compose --profile dev up -d --build",
+    "docker:prod": "docker compose --profile prod up -d --build",
+    "docker:down": "docker compose down",
+    "docker:clean": "docker compose down -v --rmi local",
+    "docker:logs": "docker compose logs -f",
+    "docker:status": "docker compose ps",
+    "docker:shell": "docker compose --profile dev exec dev sh",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "next.js",
+    "landing-page",
+    "template",
+    "agentic-development",
+    "claude-code",
+    "gemini-cli",
+    "aws",
+    "docker"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "next": "^16.1.4",
+    "postcss": "^8.5.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@next/bundle-analyzer": "^16.1.4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^25.0.10",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.3",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^16.1.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "jsdom": "^28.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.1",
+    "vitest": "^4.0.18"
+  }
+}

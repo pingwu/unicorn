@@ -1,0 +1,53 @@
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Next.js build output (we rebuild in Docker)
+.next
+out
+
+# Version control
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files (don't include secrets in image)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Documentation (not needed in production image)
+docs/
+*.md
+!README.md
+
+# Test files
+__tests__
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Docker files (prevent recursive copy)
+Dockerfile
+Dockerfile.dev
+docker-compose.yml
+.dockerignore
+
+# Build/cache artifacts
+coverage
+.nyc_output
+.turbo
+.cache
+*.tsbuildinfo

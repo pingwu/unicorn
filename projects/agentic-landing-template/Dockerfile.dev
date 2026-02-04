@@ -1,0 +1,60 @@
+# Development Container Dockerfile
+# Optimized for local development with hot reload
+# Supports VS Code Dev Containers, Cursor, and standalone Docker development
+#
+# Includes vendor CLIs: gh, aws, gcloud, az
+# (per AGENTS.md: "Vendor CLIs over custom scripts")
+
+FROM node:20-alpine
+
+# Add build arguments for user and group IDs
+ARG UID=1000
+ARG GID=1000
+
+# Install essential development tools and Python (needed for aws/az CLIs)
+RUN apk add --no-cache \
+    git \
+    curl \
+    bash \
+    openssh-client \
+    python3 \
+    py3-pip \
+    github-cli \
+    aws-cli \
+    && rm -rf /var/cache/apk/*
+
+# Install Azure CLI via pip
+RUN pip3 install --break-system-packages azure-cli \
+    && rm -rf /root/.cache/pip
+
+# Install Google Cloud SDK
+ARG GCLOUD_VERSION=514.0.0
+RUN ARCH=$(uname -m | sed 's/aarch64/arm/' | sed 's/x86_64/x86_64/') \
+    && curl -sSL "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-${GCLOUD_VERSION}-linux-${ARCH}.tar.gz" \
+    | tar -xz -C /opt \
+    && /opt/google-cloud-sdk/install.sh --quiet --path-update false \
+    && rm -rf /opt/google-cloud-sdk/.install/.backup
+
+# Set working directory
+WORKDIR /workspace
+
+# Create non-root user for development with arguments
+RUN addgroup -g $GID node || true && \
+    adduser -u $UID -G node -s /bin/bash -D node || true
+
+# Set ownership
+RUN chown -R node:node /workspace
+
+# Switch to non-root user
+USER node
+
+# Environment variables for development
+ENV NODE_ENV=development
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PATH="/opt/google-cloud-sdk/bin:/workspace/node_modules/.bin:$PATH"
+
+# Expose development ports
+EXPOSE 3000
+
+# Default command (can be overridden)
+CMD ["npm", "run", "dev"]

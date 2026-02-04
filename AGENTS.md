@@ -7,11 +7,21 @@ This document serves as the master constitution for the Unicorn Project, a sole 
 **1.1. Core Identity & Mission**
 The Unicorn Project is a sole proprietorship, owned by me, designed to generate substantial revenue while making a meaningful social impact. Our mission is to leverage cutting-edge AI-assisted development to create innovative solutions and content across various domains.
 
-**1.2. Organizational Structure: A Root for Sub-Projects**
-This project serves as the root folder for a diverse ecosystem of sub-projects, each contributing to our overarching goals. These sub-projects include:
-*   **Content Creation:** Video production, event production, book authoring, podcast production, blog writing, social media management.
-*   **Customer Service:** Enhancing user experience and support.
-*   **Marketing:** Developing and executing Integrated Marketing Campaigns for consistent messaging and brand identity across all offerings.
+**1.2. Project Organization: The Head (Knowledge) and Hand (Projects) Approach**
+This project operates on a clear distinction between **knowledge** and **action**.
+
+*   **The Head (Knowledge - Located in `/knowledge/`):** This is your personal knowledge management (PKM) system, powered by Obsidian. It serves as your "second brain," capturing all the context, relationships, events, and ideas that inform your decisions. This includes:
+    *   **Objects:** People, companies, technologies, concepts.
+    *   **Events:** Meetings, decisions, milestones.
+    *   **Activities:** Daily logs, brainstorming sessions.
+    *   **Relationships:** Interconnections between all the above, visualized and navigated through Obsidian's linking capabilities.
+
+*   **The Hand (Projects - Located in `/projects/`):** This is where the actual work gets done. Each sub-folder within `/projects/` represents a distinct mission or initiative, containing all the code, assets, and specific documentation required to bring that project to fruition. Examples include:
+    *   **Content Creation:** Video production, event production, book authoring, podcast production, blog writing, social media management.
+    *   **Customer Service:** Enhancing user experience and support.
+    *   **Marketing Initiatives:** Developing and executing Integrated Marketing Campaigns for consistent messaging and brand identity across all offerings.
+
+This clear separation ensures that your operational work remains agile and focused within each project, while your strategic thinking and contextual understanding are robustly managed in a dedicated knowledge base.
 
 **1.3. Software Creation Philosophy**
 Our approach to software creation is agile, disciplined, and market-driven:
@@ -48,10 +58,12 @@ You will act as an orchestrator, providing expert guidance, executing technical 
 
 ## 4. The "Office" Structure (Agent Skills)
 
-This project adopts an enterprise-like "office" structure, with each office corresponding to a specialized Agent Skill. These skills provide focused expertise for different aspects of the business. You will utilize and, when necessary, help create or refine these skills.
+This project adopts an enterprise-like "office" structure, but rather than being represented by physical folders, each "Office" corresponds to a specialized **Agent Skill** defined within `.gemini/skills/` (and activated by `.skill` files in the project root). These skills provide focused expertise for different aspects of the business. You will utilize and, when necessary, help create or refine these skills.
 
-### 0. Office of the CEO (Chief Executive Officer)
-*   **Purpose:** The visionary and ultimate decision-maker, orchestrating all "offices" to drive the solopreneur's vision and secure market leadership in the digital marketing industry.
+The `unicorn` project root itself functions as the **"Office of the CEO"**, overseeing all operations and orchestrating the various "functional offices" (skills).
+
+### 0. Office of the CEO (Chief Executive Officer) - The Unicorn Root
+*   **Purpose:** The visionary and ultimate decision-maker, orchestrating all "offices" (Agent Skills) to drive the solopreneur's vision and secure market leadership in the digital marketing industry.
 *   **Current Skills:** All available skills, used strategically based on the task at hand.
 *   **Responsibilities:**
     *   Define and articulate the company's vision, mission, and strategic objectives within the digital market.
@@ -62,8 +74,7 @@ This project adopts an enterprise-like "office" structure, with each office corr
 
 ### 1. Office of the CFO (Chief Financial Officer)
 *   **Purpose:** Manages financial health, cost optimization, and investment strategies crucial for a solopreneur's growth in the digital market.
-*   **Current Skills:**
-    *   `aws-cli-architect`: Provides cost-aware provisioning for cloud resources.
+*   **Associated Skills:** `aws-cli-architect` (for cost-aware provisioning), and potentially others related to financial analysis.
 *   **Responsibilities:**
     *   Analyze deployment and operational costs, focusing on ROI for digital marketing campaigns and cloud infrastructure (e.g., AWS App Runner pricing).
     *   Provide cost optimization recommendations tailored for digital services.
@@ -71,10 +82,7 @@ This project adopts an enterprise-like "office" structure, with each office corr
 
 ### 2. Office of the CTO (Chief Technology Officer)
 *   **Purpose:** Oversees the technological vision, architecture, and development of scalable digital platforms and tools essential for the digital marketing industry.
-*   **Current Skills:**
-    *   `aws-cli-architect`: For production-ready cloud infrastructure patterns.
-    *   `multi-file-architecture`: Facilitates coherent changes across the entire codebase.
-    *   `test-driven-scaffolding`: Ensures quality through a test-first approach.
+*   **Associated Skills:** `aws-cli-architect` (for production-ready cloud infra), `multi-file-architecture` (for codebase changes), `test-driven-scaffolding` (for quality), `git-expert`, `github-cli`.
 *   **Responsibilities:**
     *   Guide technical decisions, including tech stack choices for robust digital solutions.
     *   Ensure scalable, secure, and high-performance architecture for digital marketing initiatives.
@@ -83,9 +91,7 @@ This project adopts an enterprise-like "office" structure, with each office corr
 
 ### 3. Office of the CSO (Chief Security Officer)
 *   **Purpose:** Safeguards the solopreneur's digital assets, customer data, and intellectual property, ensuring robust security posture and compliance in the digital market.
-*   **Current Skills:**
-    *   `context-aware-debugging`: For identifying and resolving security vulnerabilities.
-    *   Potentially new skills focused on security audits, compliance, and threat intelligence.
+*   **Associated Skills:** `context-aware-debugging` (for vulnerabilities), and potentially new skills focused on security audits, compliance, and threat intelligence.
 *   **Responsibilities:**
     *   Develop and enforce security policies and procedures for all digital operations.
     *   Monitor for security threats, conduct vulnerability assessments, and manage incident response.
@@ -94,10 +100,7 @@ This project adopts an enterprise-like "office" structure, with each office corr
 
 ### 4. Office of the CMO (Chief Marketing Officer)
 *   **Purpose:** Drives comprehensive digital marketing strategies, branding, and communication to attract and engage the target audience.
-*   **Current Skills:**
-    *   `pm-design-thinking`: Helps in understanding user outcomes and translating them into marketing strategies.
-    *   `multi-file-architecture`: For implementing marketing features across the codebase.
-    *   `context-aware-debugging`: For troubleshooting marketing-related technical issues.
+*   **Associated Skills:** `pm-design-thinking` (for user outcomes/marketing strategy), `multi-file-architecture` (for marketing features), `context-aware-debugging` (for troubleshooting marketing tech).
 *   **Responsibilities:**
     *   Develop and execute integrated digital marketing campaigns (SEO, SEM, social media, content marketing, email marketing).
     *   Build and maintain a strong brand identity and messaging.
@@ -106,9 +109,7 @@ This project adopts an enterprise-like "office" structure, with each office corr
 
 ### 5. Office of the CRO (Chief Revenue Officer)
 *   **Purpose:** Drives all revenue-generating activities and strategies, focusing on sales, partnerships, and monetization in the dynamic digital market.
-*   **Current Skills:**
-    *   `pm-design-thinking`: Essential for understanding market opportunities and customer value propositions.
-    *   Potentially new skills for sales automation, CRM integration, and analytics.
+*   **Associated Skills:** `pm-design-thinking` (for market opportunities/value propositions), and potentially new skills for sales automation, CRM integration, and analytics.
 *   **Responsibilities:**
     *   Develop and execute strategies to maximize revenue growth across all channels.
     *   Identify and pursue new business opportunities, partnerships, and market segments.
@@ -117,9 +118,7 @@ This project adopts an enterprise-like "office" structure, with each office corr
 
 ### 6. Office of the CPO (Chief Product Officer)
 *   **Purpose:** Focuses on understanding customer needs, designing compelling digital products, and defining the product roadmap to ensure market fit and innovation.
-*   **Current Skills:**
-    *   `pm-design-thinking`: Core to understanding user desires and specifying product features.
-    *   `test-driven-scaffolding`: Ensures product features are robust and meet specifications.
+*   **Associated Skills:** `pm-design-thinking` (for user desires/product features), `test-driven-scaffolding` (for robust features).
 *   **Responsibilities:**
     *   Help define and prioritize product features based on user pain points and market opportunities in the digital space.
     *   Translate user desires into actionable development tasks and product specifications.
@@ -128,67 +127,153 @@ This project adopts an enterprise-like "office" structure, with each office corr
 
 ### 7. Office of the CCO (Chief Customer Officer)
 *   **Purpose:** Manages customer engagement, fosters strong customer relationships, and optimizes customer experience to drive loyalty and advocacy in the digital market.
-*   **Current Skills:**
-    *   `pm-design-thinking`: Essential for understanding customer needs and experiences.
-    *   `multi-file-architecture`: For implementing customer-facing features.
+*   **Associated Skills:** `pm-design-thinking` (for customer needs/experiences), `multi-file-architecture` (for customer-facing features).
 *   **Responsibilities:**
     *   Assist in building features and strategies that enhance customer interaction and satisfaction.
     *   Help integrate tools for customer relationship management (CRM) and support.
     *   Facilitate content for customer engagement, education, and success.
     *   Gather customer feedback and drive initiatives for continuous improvement.
 
-## 5. Development Workflow & Tools
+## 5. Getting Started After Cloning
+
+After cloning the repository, follow these two steps before doing any development work.
+
+### 5.1. Create Agent Skill Symlinks
+
+Each AI agent CLI needs a symlink from its config directory to the shared `skills/` folder. Create the links appropriate for your host OS:
+
+**macOS / Linux:**
+```bash
+# Gemini CLI
+ln -s ../../skills .gemini/skills
+
+# Claude Code
+mkdir -p .claude && ln -s ../skills .claude/skills
+```
+
+**Windows (PowerShell, run as Administrator):**
+```powershell
+# Gemini CLI
+cmd /c mklink /D .gemini\skills ..\..\skills
+
+# Claude Code
+New-Item -ItemType Directory -Force -Path .claude
+cmd /c mklink /D .claude\skills ..\skills
+```
+
+Verify the links resolve correctly:
+```bash
+ls .gemini/skills/   # Should list skill folders (aws-cli-architect, git-expert, etc.)
+ls .claude/skills/   # Same output
+```
+
+### 5.2. Start the Template Dev Container
+
+All development tools (Node, npm, Vitest, ESLint, TypeScript, gh, aws, gcloud, az, git) are installed inside the dev container. **Never install tools or npm packages directly on the host.**
+
+```bash
+cd projects/agentic-landing-template
+npm run docker:dev    # Builds the image, runs npm install, starts the dev server
+```
+
+On first run, the container will `npm install` automatically (the workspace is volume-mounted, so `node_modules/` and lock file changes persist to the host).
+
+Once the container is running, use it for all development tasks:
+```bash
+npm run docker:shell                    # Interactive shell inside the container
+docker compose run --rm --no-deps dev sh -c "<command>"   # One-off commands
+```
+
+Examples:
+```bash
+# Run tests
+docker compose run --rm --no-deps dev sh -c "npx vitest run"
+
+# Install a new package
+docker compose run --rm --no-deps dev sh -c "npm install -D <package>"
+
+# Type-check
+docker compose run --rm --no-deps dev sh -c "npx tsc --noEmit"
+
+# Use GitHub CLI
+docker compose run --rm --no-deps dev sh -c "gh pr list"
+```
+
+## 6. Development Workflow & Tools
 
 This project guides the entrepreneur through key phases of cloud-native development:
 
-### 5.1. Local Development
+### 6.1. Local Development
 *   **Purpose:** Rapid iteration and content customization within a consistent containerized environment.
 *   **Commands:** `npm run docker:dev`, `npm run docker:down`, `npm run docker:logs`, `npm run docker:status`, `npm run docker:shell`, `npm run docker:clean`.
 
-### 5.2. AI-Assisted Customization
+### 6.2. AI-Assisted Customization
 *   **Purpose:** Modify content and features using natural language prompts, translating high-level instructions into code changes.
 
-### 5.3. Production Preview
+### 6.3. Production Preview
 *   **Purpose:** Test the optimized build before cloud deployment to ensure functionality and performance.
 *   **Commands:** `npm run docker:prod`.
 
-### 5.4. Cloud Deployment (AWS App Runner / Google Cloud Run)
+### 6.4. Cloud Deployment (AWS App Runner / Google Cloud Run)
 *   **Purpose:** Publish applications to live, internet-accessible services.
 *   **Key Steps (Cloud Run Example):** Build Docker image, configure Docker for gcloud credentials, push image to GCR, deploy to Cloud Run.
 *   **Key Files:** `Dockerfile`, `next.config.ts`.
 
-## 6. Project Structure (Example from `agentic-landing-template`)
+## 7. The Knowledge Graph: Tracking Context and Relationships with Obsidian
+
+The `/knowledge/` directory, integrated with Obsidian, serves as your "second brain" for the entire Unicorn Project. It is designed to capture, connect, and retrieve all the contextual information, relationships, and historical data that inform your projects and decisions.
+
+*   **Structure within `/knowledge/`:**
+    *   **`/knowledge/people/`:** Individual Markdown files for each person (contacts, mentors, collaborators).
+    *   **`/knowledge/companies/`:** Notes on businesses, partners, or competitors.
+    *   **`/knowledge/daily/`:** Your daily notes, capturing events, activities, and reflections. Ideal for journaling and tracking progress.
+    *   **`/knowledge/ideas/`:** Brainstorming, concepts, and early-stage project thoughts.
+    *   You can expand this with other categories as needed (e.g., `/meetings/`, `/resources/`).
+
+*   **Leveraging Obsidian's Power:**
+    *   **Wikilinks `[[ ]]`:** Use these to create connections between any notes. For example, mention `[[John Doe]]` in a daily note or link a `[[Project X]]` note to related `[[Technology Y]]`.
+    *   **Graph View:** Visualize the entire network of your knowledge, identifying connections you might not have seen before.
+    *   **Search and Retrieval:** Quickly find any piece of information through powerful search capabilities.
+    *   **Templates:** Create templates for common note types (e.g., meeting notes, project briefs) to ensure consistency.
+
+This system ensures that while your "hands" are busy building projects, your "head" is continuously accumulating and connecting valuable knowledge, making your entire operation more intelligent and robust.
+
+## 8. Project Structure: The Unicorn Root
+
+The top-level `unicorn` project directory now embodies the "Head (Knowledge) and Hand (Projects) Separated" philosophy.
 
 ```
-agentic-landing-template/
-├── app/
-│   ├── layout.tsx          # Root layout with metadata
-│   ├── page.tsx            # Main landing page (EDIT THIS)
-│   └── globals.css         # Global styles
-├── public/
-│   └── images/             # Your images here
-├── docs/                   # Project documentation
-├── templates/              # Alternative landing page templates
-├── .skills/                # Agent-agnostic prompting patterns
-├── GEMINI.md               # System prompt for Gemini CLI
-├── CLAUDE.md               # System prompt for Claude Code
-├── AGENTS.md               # Shared agent instructions
-├── components/             # Reusable UI components
-├── Dockerfile              # Production container config
-├── Dockerfile.dev          # Development container config
-├── docker-compose.yml      # Docker orchestration
-├── eslint.config.mjs       # ESLint 9 flat config
-└── package.json            # Dependencies
+/unicorn/
+├── .gemini/                 # Gemini CLI configuration and global skills. To ensure all skills are discoverable, create a symbolic link after cloning the project: `ln -s skills .gemini/skills`
+├── .obsidian/               # Obsidian vault configuration (for /knowledge)
+├── knowledge/               # THE HEAD: Your Personal Knowledge Management system
+│   ├── people/              # Notes on contacts, collaborators, etc.
+│   ├── companies/           # Notes on businesses, partners, competitors
+│   ├── daily/               # Your daily notes and activity logs
+│   └── ideas/               # Brainstorming, concepts, early-stage thoughts
+├── projects/                # THE HAND: All your distinct sub-projects/missions
+│   └── agentic-landing-template/ # Example sub-project: A web application
+│       ├── app/
+│       ├── components/
+│       └── ... (Self-contained project files)
+├── AGENTS.md                # THIS DOCUMENT: The Unicorn Project Master Constitution
+├── CLAUDE.md                # System prompt for Claude Code (if used)
+├── GEMINI.md                # System prompt for Gemini CLI (for this root project)
+├── LICENSE
+├── git-expert.skill         # Activated global skill
+├── github-cli.skill         # Activated global skill
+└── ... (Other global files/configuration)
 ```
 
-## 7. Development Conventions
+## 9. Development Conventions
 
 *   **TypeScript:** Use explicit types.
 *   **React/Next.js:** Prefer Server Components; use `'use client'` sparingly. Preserve accessibility.
 *   **Tailwind CSS:** Use utility classes; ensure dark mode compatibility.
 *   **Docker:** Always use detached mode (`-d`) for container startup.
+*   **Container-first tool installation:** Never install npm packages or dev tools directly on the host. Always install inside the project's dev container (e.g., `docker compose run --rm --no-deps dev sh -c "npm install -D <package>"`). The workspace is volume-mounted, so `package.json` and `package-lock.json` changes persist to the host automatically.
 
-## 8. Agent Skills (Advanced Prompting)
+## 10. Agent Skills (Advanced Prompting)
 
 The `.skills/` folder contains **agent-agnostic prompting patterns** that work with any CLI coding agent. These skills teach you how to orchestrate AI effectively.
 
@@ -199,20 +284,22 @@ The `.skills/` folder contains **agent-agnostic prompting patterns** that work w
 *   **multi-file-architecture:** Coordinated changes across entire codebases.
 *   **test-driven-scaffolding:** Write tests first, then implementation.
 *   **context-aware-debugging:** Effective debugging with AI assistance.
+*   **git-expert:** Advanced Git concepts and recovery.
+*   **github-cli:** GitHub command-line operations and workflows.
 
 ### How to Use Skills
 
-*   **Option 1: Reference in prompts:** "Using the test-driven-scaffolding approach, add user authentication. Write the tests first, show me for approval, then implement."
-*   **Option 2: Read skill file first:** "Read .skills/aws-cli-architect/SKILL.md, then help me provision a production-ready ECS Fargate service following those patterns."
-*   **Option 3: Ask agent to apply skill:** "Apply pm-design-thinking principles to this feature request: 'Add a dashboard'. What should I actually build?"
+*   **Option 1: Reference in prompts:** "Using the `test-driven-scaffolding` approach, add user authentication. Write the tests first, show me for approval, then implement."
+*   **Option 2: Read skill file first:** "Read `.gemini/skills/aws-cli-architect/SKILL.md`, then help me provision a production-ready ECS Fargate service following those patterns."
+*   **Option 3: Ask agent to apply skill:** "Apply `pm-design-thinking` principles to this feature request: 'Add a dashboard'. What should I actually build?"
 
-## 9. Troubleshooting
+## 11. Troubleshooting
 
 *   **Build failures:** Analyze error messages, verify Node.js versions, check dependencies.
 *   **Deployment issues:** Verify Docker image compatibility, cloud service configurations, and IAM permissions.
 *   **AI changes broke something:** Use Git to revert or `git stash` to clean the working directory.
 
-## 10. Next Steps & Learning Path
+## 12. Next Steps & Learning Path
 
 This template serves as a robust starting point. The skills learned are transferable to any project.
 *   **Customize content further** using prompt libraries.

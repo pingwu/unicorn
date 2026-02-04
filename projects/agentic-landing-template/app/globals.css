@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* Base styles */
+* {
+  border-color: theme(colors.slate.200);
+}
+
+.dark * {
+  border-color: theme(colors.slate.700);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: theme(colors.slate.50);
+  color: theme(colors.slate.900);
+}
+
+.dark body {
+  background-color: theme(colors.slate.900);
+  color: theme(colors.slate.50);
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+}
+
+/* Selection colors */
+::selection {
+  background-color: theme(colors.blue.100);
+}
+
+.dark ::selection {
+  background-color: theme(colors.blue.900 / 30%);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out forwards;
+}
+
+/* Blur gradient backgrounds */
+.blur-gradient {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  opacity: 0.7;
+}
