@@ -507,7 +507,7 @@ export default config;
 | Issue | Cause | Solution |
 |-------|-------|----------|
 | "Unknown utility class" | Tailwind v3 syntax | Use `@import "tailwindcss"` |
-| Build fails | TypeScript errors | Run `npm run lint` |
+| Build fails | TypeScript errors | Run `docker compose exec dev npm run lint` |
 | Container exits | Runtime error | Check `docker logs` |
 | ECR push fails | Auth expired | Re-run ECR login |
 | Page 404 | Wrong port | Use port 3000 in container |

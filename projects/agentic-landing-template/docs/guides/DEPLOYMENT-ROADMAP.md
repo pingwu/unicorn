@@ -18,11 +18,13 @@ This guide walks you through deploying your landing page from local development 
 
 Before starting deployment:
 
-- [ ] **AWS Account** - [Sign up here](https://aws.amazon.com/)
-- [ ] **AWS CLI** - Installed inside the dev container (pre-configured)
-- [ ] **Docker Desktop** - [Download](https://www.docker.com/products/docker-desktop/)
-- [ ] **Dev container runs** - `npm run docker:dev` starts successfully
-- [ ] **Docker production image works** - `npm run docker:prod` shows healthy container
+- [ ] **Docker Desktop** — [Download](https://www.docker.com/products/docker-desktop/)
+- [ ] **Git** — [Download](https://git-scm.com/)
+- [ ] **AI Coding Agent** — [Claude Code](https://docs.anthropic.com/en/docs/claude-code) or [Gemini CLI](https://github.com/google-gemini/gemini-cli)
+- [ ] **AWS Account** — [Sign up here](https://aws.amazon.com/)
+- [ ] **AWS CLI** — Pre-installed inside the dev container
+- [ ] **Dev container runs** — `npm run docker:dev` starts successfully
+- [ ] **Docker production image works** — `npm run docker:prod` shows healthy container
 
 ---
 
