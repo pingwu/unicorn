@@ -53,9 +53,9 @@ The default template works for consulting services, professional portfolios, dig
 | "Stop the containers" | `npm run docker:down` | Stop containers |
 | "Open a shell in the container" | `npm run docker:shell` | Shell into container |
 | "Show the container logs" | `npm run docker:logs` | View logs |
-| "Run the tests" | `npm run test:run` | Run tests |
-| "Type-check the project" | `npm run typecheck` | TypeScript check |
-| "Lint the code" | `npm run lint` | ESLint |
+| "Run the tests" | `docker compose exec dev npm run test:run` | Run tests |
+| "Type-check the project" | `docker compose exec dev npm run typecheck` | TypeScript check |
+| "Lint the code" | `docker compose exec dev npm run lint` | ESLint |
 
 ## Documentation
 

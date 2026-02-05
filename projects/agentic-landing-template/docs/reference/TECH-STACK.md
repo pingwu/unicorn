@@ -513,18 +513,21 @@ export default config;
 | Page 404 | Wrong port | Use port 3000 in container |
 
 ### Debug Commands
+
+All debug commands (except Docker and AWS) must run inside the container:
+
 ```bash
-# Check TypeScript
-npx tsc --noEmit
+# Check TypeScript (inside container)
+docker compose exec dev npx tsc --noEmit
 
-# Check Tailwind
-npm run build 2>&1 | grep -i tailwind
+# Check Tailwind (inside container)
+docker compose exec dev npm run build 2>&1 | grep -i tailwind
 
-# Check Docker
+# Check Docker (on host)
 docker logs $(docker ps -q)
 
-# Check AWS
-aws apprunner describe-service --service-arn <ARN>
+# Check AWS (inside container - aws CLI is pre-installed)
+docker compose exec dev aws apprunner describe-service --service-arn <ARN>
 ```
 
 ---

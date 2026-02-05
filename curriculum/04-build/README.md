@@ -85,10 +85,10 @@ This is not "no-code." It is "your-code, AI-assisted." You own every file. You c
 **CLI Reference:**
 ```bash
 cd projects/agentic-landing-template
-npm run docker:dev        # Start dev container
-npm run docker:shell      # Shell into container
-npm run test:run          # Run tests (inside container)
-npm run docker:down       # Stop container
+npm run docker:dev                         # Start dev container
+npm run docker:shell                       # Shell into container
+docker compose exec dev npm run test:run   # Run tests
+npm run docker:down                        # Stop container
 ```
 
 All development tools live inside the container. Never install Node, npm, or packages directly on the host.

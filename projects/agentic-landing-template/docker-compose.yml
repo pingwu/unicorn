@@ -4,7 +4,6 @@
 # Commands:
 #   npm run docker:dev   - Development with hot-reload (default)
 #   npm run docker:prod  - Test production build locally
-#   npm run docker:prod  - Test production build locally
 
 services:
   # ============================================================

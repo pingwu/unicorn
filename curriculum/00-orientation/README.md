@@ -91,9 +91,15 @@ Do not edit. Do not organize. Just write. This is your incubator journal. You wi
 
 ## What You Need
 
-- A computer with a terminal (macOS, Linux, or Windows with WSL)
-- Docker installed (all dev tools run inside a container -- never install on the host)
-- A text editor or IDE
+| Tool | Purpose | Install |
+|------|---------|---------|
+| Docker Desktop | Runs containers | [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/) |
+| Git | Version control | [git-scm.com](https://git-scm.com/) |
+| AI Coding Agent | Your development partner | [Claude Code](https://docs.anthropic.com/en/docs/claude-code) or [Gemini CLI](https://github.com/google-gemini/gemini-cli) |
+
+**Do NOT install:** Node.js, npm, Python, or any other development tools. Everything else runs inside the Docker container.
+
+You will also need:
 - A notebook or blank document for Writitation
 - Willingness to ask honest questions
 

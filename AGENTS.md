@@ -90,18 +90,18 @@ docker compose run --rm --no-deps dev sh -c "<command>"
 | "Check container status" | `npm run docker:status` | Check container status |
 | "Clean up containers and volumes" | `npm run docker:clean` | Remove containers and volumes |
 
-### Quality Commands (inside container)
+### Quality Commands (run inside container)
 
 | Natural Language | CLI Command |
 |-----------------|-------------|
-| "Run all tests" | `npx vitest run` |
-| "Lint the code" | `npm run lint` |
-| "Type-check the project" | `npx tsc --noEmit` |
+| "Run all tests" | `docker compose exec dev npm run test:run` |
+| "Lint the code" | `docker compose exec dev npm run lint` |
+| "Type-check the project" | `docker compose exec dev npm run typecheck` |
 
-### One-Off Container Commands
+### One-Off Container Commands (when container is not running)
 
 ```bash
-docker compose run --rm --no-deps dev sh -c "npx vitest run"
+docker compose run --rm --no-deps dev sh -c "npm run test:run"
 docker compose run --rm --no-deps dev sh -c "npm install -D <package>"
 docker compose run --rm --no-deps dev sh -c "gh pr list"
 ```
