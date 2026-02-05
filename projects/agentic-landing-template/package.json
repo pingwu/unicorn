@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "docker:dev": "UID=$(id -u) GID=$(id -g) docker compose --profile dev up -d --build",
     "docker:prod": "docker compose --profile prod up -d --build",
     "docker:down": "docker compose down",
