@@ -1,1 +1,8 @@
 *.DS_Store
+
+# Agent skill junctions/symlinks (created locally per AGENTS.md instructions)
+.claude/skills/
+.gemini/skills/
+
+# Local settings
+.claude/settings.local.json

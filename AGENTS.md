@@ -46,14 +46,32 @@ ln -s ../../skills .gemini/skills
 mkdir -p .claude && ln -s ../skills .claude/skills
 ```
 
-**CLI Reference (Windows PowerShell as Admin)**:
+**CLI Reference (Windows — no admin required)**:
+
+Use junctions instead of symlinks. Junctions don't require admin privileges but need **absolute paths**.
+
 ```powershell
-cmd /c mklink /D .gemini\skills ..\..\skills
+# From the repository root (e.g., C:\MASProjects\unicorn)
+$repoRoot = (Get-Location).Path
+
+# Create .claude directory if it doesn't exist
 New-Item -ItemType Directory -Force -Path .claude
-cmd /c mklink /D .claude\skills ..\skills
+
+# Create junctions with absolute paths
+cmd /c mklink /J .gemini\skills "$repoRoot\skills"
+cmd /c mklink /J .claude\skills "$repoRoot\skills"
 ```
 
-Verify: `ls .gemini/skills/` and `ls .claude/skills/`
+Or in Command Prompt (replace `C:\MASProjects\unicorn` with your actual path):
+```cmd
+mkdir .claude 2>nul
+mklink /J .gemini\skills C:\MASProjects\unicorn\skills
+mklink /J .claude\skills C:\MASProjects\unicorn\skills
+```
+
+> **Note**: Windows symlinks (`mklink /D`) require Administrator privileges. Junctions (`mklink /J`) are functionally equivalent for local directories and work without elevation.
+
+Verify: `dir .gemini\skills` and `dir .claude\skills`
 
 ### 4.2. Start the Dev Container
 
