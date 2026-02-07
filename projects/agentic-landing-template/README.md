@@ -86,6 +86,55 @@ AI coding agents read these files automatically:
 
 Found an issue? [Open an issue](https://github.com/pingwu/agentic-landing-template/issues) or submit a PR.
 
+## Production Graduation Checklist
+
+Before exposing this app to real users or real traffic, confirm **every item below**.
+
+### Runtime Safety
+
+- Global error boundary is implemented (`app/error.tsx`)
+- 404 handling is explicit (`app/not-found.tsx`)
+- App does not crash on unexpected runtime errors
+- Users never see raw stack traces
+
+### Configuration Safety
+
+- All required environment variables are validated at startup
+- Missing or invalid config causes a clear, immediate failure
+- No secrets are referenced in client components
+
+### Deployment Signals
+
+- `/health` endpoint returns `200 OK`
+- Cloud platform health checks are configured
+- Failed deploys are detectable without inspecting logs
+
+### Security Baseline
+
+- Security headers are explicitly set (CSP, frame, content-type, referrer)
+- Dependencies are locked (`npm ci`)
+- No credentials are committed or logged
+
+### UX & Accessibility
+
+- Keyboard navigation works end-to-end
+- Mobile navigation opens and closes reliably
+- No major layout shift on page load
+- At least one accessibility test runs in CI
+
+### Build & Release Confidence
+
+- Production build runs successfully (`npm run docker:prod`)
+- Tests pass in the same container used for production
+- Target platform is explicit (`linux/amd64`)
+- Rollback strategy is understood (even if manual)
+
+### Documentation Honesty
+
+- README clearly states what the app does **not** include
+- Deployment steps exist for at least one platform
+- Ownership is clear if the site breaks
+
 ## License
 
 MIT — use freely for personal or commercial projects.
