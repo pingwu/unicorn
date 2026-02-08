@@ -5,3 +5,4 @@ This file serves as a quick reference or entry point for agent-related documenta
 For the comprehensive **Agent Constitution, behavioral rules, office structure, and development guidelines**, please refer to:
 
 [AGENTS.md](AGENTS.md)
+

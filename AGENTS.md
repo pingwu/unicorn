@@ -21,6 +21,10 @@ Agent behavioral rules for the Unicorn Project. This file is for AI coding agent
 - **MVP**: Build the simplest version that proves the concept. No speculative features.
 - **Specification-driven**: Define features and behavior upfront before coding.
 
+### Agent Mindset: Chief of Staff
+
+Your primary objective is to keep the user focused on a Minimum Viable Product (MVP) for each session. If the user's ideas become scattered, gently guide them back to a single, achievable goal and leverage the appropriate "Office" skill to execute the task. Act as an orchestrator — providing expert guidance, executing technical tasks, and ensuring alignment with the user's vision.
+
 ## 3. Office Structure — Role-to-Skill Mapping
 
 The project uses an "Office" metaphor. Each role maps to agent skills in `skills/`.
@@ -42,41 +46,39 @@ The project uses an "Office" metaphor. Each role maps to agent skills in `skills
 
 **Natural Language (Recommended)**:
 ```
-"Set up the agent skill symlinks for .gemini and .claude directories"
+"Set up the agent skill symlinks for .gemini, .claude, and .agent directories make sure you are at the root of unicorn project folder"
 ```
 
 **CLI Reference (macOS / Linux)**:
 ```bash
-ln -s ../../skills .gemini/skills
-mkdir -p .claude && ln -s ../skills .claude/skills
+mkdir -p .claude && ln -s skills .claude/skills
+mkdir -p .agent && ln -s skills .agent/skills
+mkdir -p .gemini && ln -s skills .gemini/skills
 ```
 
 **CLI Reference (Windows — no admin required)**:
 
 Use junctions instead of symlinks. Junctions don't require admin privileges but need **absolute paths**.
 
+**PowerShell** (run from project root):
 ```powershell
-# From the repository root (e.g., C:\MASProjects\unicorn)
 $repoRoot = (Get-Location).Path
 
 # Create .claude directory if it doesn't exist
-New-Item -ItemType Directory -Force -Path .claude
+New-Item -ItemType Directory -Force -Path "$repoRoot\.agent"
+New-Item -ItemType Directory -Force -Path "$repoRoot\.gemini"
+New-Item -ItemType Directory -Force -Path "$repoRoot\.claude"
 
-# Create junctions with absolute paths
-cmd /c mklink /J .gemini\skills "$repoRoot\skills"
-cmd /c mklink /J .claude\skills "$repoRoot\skills"
+# use CMD to Create junctions with absolute paths
+cmd /c mklink /J "$repoRoot\.agent\skills" "$repoRoot\skills"
+cmd /c mklink /J "$repoRoot\.gemini\skills" "$repoRoot\skills"
+cmd /c mklink /J "$repoRoot\.claude\skills" "$repoRoot\skills"
 ```
 
-Or in Command Prompt (replace `C:\MASProjects\unicorn` with your actual path):
-```cmd
-mkdir .claude 2>nul
-mklink /J .gemini\skills C:\MASProjects\unicorn\skills
-mklink /J .claude\skills C:\MASProjects\unicorn\skills
-```
 
 > **Note**: Windows symlinks (`mklink /D`) require Administrator privileges. Junctions (`mklink /J`) are functionally equivalent for local directories and work without elevation.
 
-Verify: `dir .gemini\skills` and `dir .claude\skills`
+Verify: `dir .gemini\skills`, `dir .claude\skills`, and `dir .agent\skills` 
 
 ### 4.2. Start the Dev Container
 
@@ -101,7 +103,7 @@ docker compose run --rm --no-deps dev sh -c "<command>"
 
 ### 4.3. Initialize Personal Knowledge
 
-Upon first cloning the project, it is recommended to initialize your `personal_knowledge/` vault.
+Upon first cloning the project, initialize your `personal_knowledge/` vault. See [Section 11](#11-personal-development-and-knowledge-management) for usage guidelines.
 
 **Natural Language (Recommended)**:
 ```
@@ -112,8 +114,6 @@ Upon first cloning the project, it is recommended to initialize your `personal_k
 ```bash
 cp -R template_knowledge/* personal_knowledge/
 ```
-
-**Important**: The `personal_knowledge/` directory is for your personal use and is **git-ignored**. Ensure you do not add its contents to the Unicorn project's Git repository.
 
 
 ## 5. Development Workflow
@@ -154,24 +154,14 @@ docker compose run --rm --no-deps dev sh -c "gh pr list"
 - **Docker**: Always detached mode (`-d`) for container startup.
 - **Container-first installs**: Never install npm packages on the host. Use `docker compose run --rm --no-deps dev sh -c "npm install -D <package>"`.
 
-## 7. Project Structure
+## 7. Key Paths
 
-```
-/unicorn/
-├── .claude/skills/     → skills/ (symlink)
-├── .gemini/skills/     → skills/ (symlink)
-├── .obsidian/          Obsidian vault config
-├── curriculum/         Student-facing learning content
-├── knowledge/          READ-ONLY: PKM vault (Obsidian)
-├── personal_knowledge/ Your personal PKM vault (Obsidian), git-ignored.
-├── projects/           Code changes happen here
-│   └── agentic-landing-template/
-├── skills/             Agent skill definitions (canonical)
-├── AGENTS.md           THIS FILE
-├── CLAUDE.md           Claude Code prompt
-├── GEMINI.md           Gemini CLI prompt
-└── LICENSE
-```
+| Path | Purpose |
+|------|---------|
+| `knowledge/` | Read-only context (never modify) |
+| `projects/` | All code changes happen here |
+| `skills/` | Canonical agent skill definitions |
+| `personal_knowledge/` | Personal vault (git-ignored) |
 
 ## 8. Troubleshooting
 
