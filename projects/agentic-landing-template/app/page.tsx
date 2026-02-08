@@ -43,10 +43,10 @@ export default function Home() {
           {/* Logo */}
           <div className="flex items-center gap-2 cursor-pointer">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-bold text-sm">
-              YN
+              JS
             </div>
             <span className="text-xl font-bold tracking-tight font-display text-slate-900 dark:text-white">
-              Your Name
+              John Smith
             </span>
           </div>
 
@@ -58,8 +58,8 @@ export default function Home() {
             <a href="#about" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               About
             </a>
-            <a href="#work" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              Work
+            <a href="/resume" className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              Resume
             </a>
             <a href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
               Contact
@@ -95,18 +95,18 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-slate-900 dark:text-white mb-6">
               Hi, I&apos;m{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                Your Name
+                John Smith
               </span>
             </h1>
 
             {/* Title/Specialty */}
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-4 font-medium">
-              Your Professional Title
+              AI Orchestration Architect
             </p>
 
             {/* Tagline */}
             <p className="text-lg text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-              Your value proposition in one compelling sentence. What transformation do you provide for your clients?
+              I design and build intelligent systems where AI agents collaborate to solve problems no single model can tackle alone.
             </p>
 
             {/* CTA Buttons */}
@@ -115,8 +115,8 @@ export default function Home() {
                 Book a Call
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </a>
-              <a href="#work" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl transition-all">
-                View My Work
+              <a href="/resume" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl transition-all">
+                View My Resume
               </a>
             </div>
           </div>
@@ -143,20 +143,20 @@ export default function Home() {
             {/* Stats grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">10+</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">9+</div>
                 <div className="text-sm text-slate-600 dark:text-slate-400">Years Experience</div>
               </div>
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">50+</div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">Projects Completed</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">1000s</div>
+                <div className="text-sm text-slate-600 dark:text-slate-400">Hours Saved</div>
               </div>
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">30+</div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">Happy Clients</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">50%</div>
+                <div className="text-sm text-slate-600 dark:text-slate-400">Cost Reduction</div>
               </div>
               <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">100%</div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">Satisfaction Rate</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">Millions</div>
+                <div className="text-sm text-slate-600 dark:text-slate-400">Docs Processed</div>
               </div>
             </div>
 
@@ -168,7 +168,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Education</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Your Degree from Your University</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">M.S. CS, Stanford & B.S. CE, Michigan</p>
                 </div>
               </div>
 
@@ -178,7 +178,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Experience</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Former Role at Notable Company</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">Multi-Agent Platform Architect</p>
                 </div>
               </div>
 
@@ -188,7 +188,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Recognition</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Award or Notable Achievement</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">Orchestration Patterns Innovator</p>
                 </div>
               </div>
             </div>
@@ -468,20 +468,17 @@ export default function Home() {
             {/* Contact options */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
-                href="https://calendly.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:john@email.com"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-lg shadow-blue-500/25"
               >
-                <CalendarIcon className="w-5 h-5 mr-2" />
-                Schedule a Call
+                <MailIcon className="w-5 h-5 mr-2" />
+                john@email.com
               </a>
               <a
-                href="mailto:your@email.com"
+                href="/resume"
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-all"
               >
-                <MailIcon className="w-5 h-5 mr-2" />
-                your@email.com
+                View Digital Resume
               </a>
             </div>
 
@@ -508,7 +505,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-sm text-slate-600 dark:text-slate-400">
-              © {new Date().getFullYear()} Your Name. All rights reserved.
+              © {new Date().getFullYear()} John Smith. All rights reserved.
             </div>
             <div className="flex items-center gap-6">
               <a href="#" className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
