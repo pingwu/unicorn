@@ -55,6 +55,14 @@ When you initialize the Unicorn project for the first time, `template_knowledge/
 
 Each project in `projects/` should be tracked in its own separate git repository. This gives you full control over visibility (public or private) for each project independently.
 
+### First Sample Project: `agentic-landing-template`
+
+Your first project is a personal landing page powered by AI. It solves a common problem: you need a professional web presence but don't want to spend weeks building one from scratch. The template generates a polished landing page that tells your story and showcases your work.
+
+To make it yours, update it with your own personal story and resume from your `personal_knowledge/` vault. Point your AI agent at your profile, goals, and resume files and ask it to rebuild the landing page content around you. The result is a deployed site that reflects who you are and what you're building.
+
+### Creating New Projects
+
 ```bash
 # 1. Add your project to .gitignore so it's not tracked by the parent repo
 echo "projects/my-new-project/" >> .gitignore
