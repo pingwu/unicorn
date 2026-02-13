@@ -43,10 +43,10 @@ export default function Home() {
           {/* Logo */}
           <div className="flex items-center gap-2 cursor-pointer">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-bold text-sm">
-              JS
+              RA
             </div>
             <span className="text-xl font-bold tracking-tight font-display text-slate-900 dark:text-white">
-              John Smith
+              Rod Alvero
             </span>
           </div>
 
@@ -73,50 +73,29 @@ export default function Home() {
 
       {/* ============================================================ */}
       {/* HERO SECTION - Main headline and call to action              */}
-      {/* Prompt: "Update hero with name '[Name]' and title '[Title]'" */}
       {/* ============================================================ */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        {/* Background gradient blurs */}
-        <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-blue-100/50 dark:bg-blue-900/10 rounded-full blur-3xl opacity-70 translate-x-1/3 -translate-y-1/4"></div>
-        <div className="absolute bottom-0 left-0 -z-10 w-[400px] h-[400px] bg-indigo-100/50 dark:bg-indigo-900/10 rounded-full blur-3xl opacity-70 -translate-x-1/3 translate-y-1/4"></div>
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/modern-home-bg.jpg')" }}>
+        {/* Overlay for dark mode effect and glassmorphism base */}
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        {/* Soft glow effects */}
+        <div className="absolute -top-1/4 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+        <div className="absolute -bottom-1/4 right-1/4 w-96 h-96 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
 
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Optional badge */}
-            <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-              </span>
-              Available for Projects
-            </div>
-
             {/* Main headline */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-slate-900 dark:text-white mb-6">
-              Hi, I&apos;m{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                John Smith
-              </span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-white mb-6 drop-shadow-lg">
+              Find Your Dream House with Me
             </h1>
-
-            {/* Title/Specialty */}
-            <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-4 font-medium">
-              AI Orchestration Architect
-            </p>
-
-            {/* Tagline */}
-            <p className="text-lg text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-              I design and build intelligent systems where AI agents collaborate to solve problems no single model can tackle alone.
-            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40">
-                Book a Call
+              <a href="#listings" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-indigo-500 hover:bg-indigo-600 rounded-xl transition-all shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transform hover:scale-105 duration-300 ease-in-out">
+                Browse Listing
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </a>
-              <a href="/resume" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl transition-all">
-                View My Resume
+              <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-teal-400 hover:bg-teal-500 rounded-xl transition-all shadow-lg shadow-teal-400/25 hover:shadow-teal-400/40 transform hover:scale-105 duration-300 ease-in-out">
+                Schedule Consultation
               </a>
             </div>
           </div>
@@ -124,416 +103,148 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/* ABOUT/AUTHORITY SECTION - Credentials and trust signals      */}
-      {/* Prompt: "Update credentials to [your experience/credentials]"*/}
+      {/* FEATURED PROPERTIES SECTION                                  */}
       {/* ============================================================ */}
-      <section id="about" className="py-20 bg-white dark:bg-slate-900">
+      <section id="listings" className="py-20 bg-white dark:bg-slate-900">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            {/* Section header */}
-            <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-12 text-center">
+              Featured Properties
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Property Card 1 */}
+              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 group relative overflow-hidden backdrop-blur-sm">
+                <img src="/images/properties/property-1.jpg" alt="Property Image 1" className="w-full h-48 object-cover rounded-t-2xl"/>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Modern Loft</h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                    <span className="font-bold text-lg text-indigo-500">$750,000</span> &bull; New York, NY
+                  </p>
+                  <a href="#" className="inline-flex items-center text-indigo-500 hover:text-indigo-600 font-medium">
+                    View Details
+                    <ArrowRightIcon className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"/>
+                  </a>
+                </div>
+              </div>
+
+              {/* Property Card 2 */}
+              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 group relative overflow-hidden backdrop-blur-sm">
+                <img src="/images/properties/property-2.jpg" alt="Property Image 2" className="w-full h-48 object-cover rounded-t-2xl"/>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Spacious Family Home</h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                    <span className="font-bold text-lg text-indigo-500">$1,200,000</span> &bull; Los Angeles, CA
+                  </p>
+                  <a href="#" className="inline-flex items-center text-indigo-500 hover:text-indigo-600 font-medium">
+                    View Details
+                    <ArrowRightIcon className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"/>
+                  </a>
+                </div>
+              </div>
+
+              {/* Property Card 3 */}
+              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 group relative overflow-hidden backdrop-blur-sm">
+                <img src="/images/properties/property-3.jpg" alt="Property Image 3" className="w-full h-48 object-cover rounded-t-2xl"/>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Luxury Condo</h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                    <span className="font-bold text-lg text-indigo-500">$950,000</span> &bull; Miami, FL
+                  </p>
+                  <a href="#" className="inline-flex items-center text-indigo-500 hover:text-indigo-600 font-medium">
+                    View Details
+                    <ArrowRightIcon className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* ABOUT THE AGENT SECTION                                      */}
+      {/* ============================================================ */}
+      <section id="about-agent" className="py-20 bg-slate-50 dark:bg-slate-950">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-shrink-0">
+              <img src="/images/agent-headshot.jpg" alt="Agent Headshot" className="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-indigo-500"/>
+            </div>
+            <div className="flex-grow text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-4">
-                Why Work With Me
+                About Rod Alvero
               </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                Brief overview of your experience and what makes you unique
+              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                I'm an engineer, systems thinker, and builder at heart. I design and build AI orchestration systems—the invisible layer that coordinates multiple AI agents, language models, and data sources into something that actually works in the real world. My goal is simple: make AI systems that serve people well, and help others learn to build them too.
+              </p>
+              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                With a background in computer engineering and distributed systems, I bring a unique blend of technical expertise and a user-centric approach to real estate. I'm passionate about leveraging technology to simplify the home-buying process and connect clients with their ideal properties.
               </p>
             </div>
-
-            {/* Stats grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-              <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">9+</div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">Years Experience</div>
-              </div>
-              <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">1000s</div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">Hours Saved</div>
-              </div>
-              <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">50%</div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">Cost Reduction</div>
-              </div>
-              <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">Millions</div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">Docs Processed</div>
-              </div>
-            </div>
-
-            {/* Credentials */}
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
-                  <BeakerIcon />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Education</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">M.S. CS, Stanford & B.S. CE, Michigan</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-indigo-600 dark:text-indigo-400 flex-shrink-0">
-                  <BriefcaseIcon />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Experience</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Multi-Agent Platform Architect</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center text-amber-600 dark:text-amber-400 flex-shrink-0">
-                  <SparklesIcon />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Recognition</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">Orchestration Patterns Innovator</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* SERVICES SECTION - Your offerings with pricing               */}
-      {/* Prompt: "Update services to [Service 1], [Service 2], etc."  */}
+      {/* CALL-TO-ACTION BANNER                                        */}
       {/* ============================================================ */}
-      <section id="services" className="py-20 bg-slate-50 dark:bg-slate-950">
+      <section className="py-20 bg-gradient-to-r from-indigo-500 to-teal-400 text-white text-center">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            {/* Section header */}
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-4">
-                Services
-              </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                Choose the engagement level that works best for you
-              </p>
-            </div>
-
-            {/* Services grid */}
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Service 1 - DIY/Entry Level */}
-              <div className="group bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-xl hover:shadow-blue-500/10">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white mb-6">
-                  <BookOpenIcon />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Service One</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-4">Description of your entry-level or self-service offering.</p>
-                <div className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-                  $499
-                  <span className="text-base font-normal text-slate-500">/project</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Feature one included
-                  </li>
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Feature two included
-                  </li>
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Feature three included
-                  </li>
-                </ul>
-                <a href="#contact" className="block w-full text-center py-3 px-6 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-900 dark:text-white rounded-xl font-medium transition-colors">
-                  Get Started
-                </a>
-              </div>
-
-              {/* Service 2 - DWY/Most Popular */}
-              <div className="relative group bg-white dark:bg-slate-800 rounded-2xl p-8 border-2 border-blue-500 shadow-xl shadow-blue-500/10">
-                {/* Popular badge */}
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                  Most Popular
-                </div>
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mb-6">
-                  <UsersIcon />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Service Two</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-4">Description of your mid-tier, done-with-you offering.</p>
-                <div className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-                  $1,999
-                  <span className="text-base font-normal text-slate-500">/month</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Everything in Service One
-                  </li>
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Weekly coaching calls
-                  </li>
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Priority support
-                  </li>
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Implementation guidance
-                  </li>
-                </ul>
-                <a href="#contact" className="block w-full text-center py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors">
-                  Apply Now
-                </a>
-              </div>
-
-              {/* Service 3 - DFY/Premium */}
-              <div className="group bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-xl hover:shadow-blue-500/10">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white mb-6">
-                  <BoltIcon />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Service Three</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-4">Description of your premium, done-for-you offering.</p>
-                <div className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-                  Custom
-                  <span className="text-base font-normal text-slate-500"> pricing</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Full-service execution
-                  </li>
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Dedicated support
-                  </li>
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Custom solutions
-                  </li>
-                  <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    Ongoing partnership
-                  </li>
-                </ul>
-                <a href="#contact" className="block w-full text-center py-3 px-6 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-900 dark:text-white rounded-xl font-medium transition-colors">
-                  Book Discovery Call
-                </a>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+            Ready to Find Your Dream Home?
+          </h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto">
+            Contact Rod Alvero today for a personalized consultation and take the first step towards your new property.
+          </p>
+          <a href="tel:+1-800-555-0199" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-indigo-800 bg-white hover:bg-gray-100 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-105 duration-300 ease-in-out">
+            <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            +1 (800) 555-0199
+          </a>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* WORK/CASE STUDIES - Show your best projects                  */}
-      {/* Prompt: "Add case study about [project] with [results]"      */}
+      {/* CONTACT INFORMATION                                          */}
       {/* ============================================================ */}
-      <section id="work" className="py-20 bg-white dark:bg-slate-900">
+      <section id="contact" className="py-20 bg-slate-50 dark:bg-slate-950">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            {/* Section header */}
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-4">
-                Featured Work
-              </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                Selected projects and results
-              </p>
-            </div>
-
-            {/* Case studies grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Case Study 1 */}
-              <div className="group bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
-                  <span className="text-white text-6xl font-bold opacity-20">01</span>
-                </div>
-                <div className="p-6">
-                  <div className="text-sm text-blue-600 dark:text-blue-400 font-medium mb-2">Client Type / Industry</div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Project Title</h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">Brief description of the challenge and solution.</p>
-                  <div className="flex items-center gap-2 text-green-600 dark:text-green-400 font-semibold">
-                    <TrendingUpIcon />
-                    Key Result / Metric
-                  </div>
-                </div>
-              </div>
-
-              {/* Case Study 2 */}
-              <div className="group bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
-                  <span className="text-white text-6xl font-bold opacity-20">02</span>
-                </div>
-                <div className="p-6">
-                  <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-2">Client Type / Industry</div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Project Title</h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">Brief description of the challenge and solution.</p>
-                  <div className="flex items-center gap-2 text-green-600 dark:text-green-400 font-semibold">
-                    <TrendingUpIcon />
-                    Key Result / Metric
-                  </div>
-                </div>
-              </div>
-
-              {/* Case Study 3 */}
-              <div className="group bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
-                  <span className="text-white text-6xl font-bold opacity-20">03</span>
-                </div>
-                <div className="p-6">
-                  <div className="text-sm text-amber-600 dark:text-amber-400 font-medium mb-2">Client Type / Industry</div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Project Title</h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">Brief description of the challenge and solution.</p>
-                  <div className="flex items-center gap-2 text-green-600 dark:text-green-400 font-semibold">
-                    <TrendingUpIcon />
-                    Key Result / Metric
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* FAQ SECTION - Answer common questions                        */}
-      {/* Prompt: "Add FAQ: [Question] with answer [Answer]"           */}
-      {/* ============================================================ */}
-      <section id="faq" className="py-20 bg-slate-50 dark:bg-slate-950">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            {/* Section header */}
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-4">
-                Frequently Asked Questions
-              </h2>
-            </div>
-
-            {/* FAQ items */}
-            <div className="space-y-4">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                  What makes you different from others?
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400">
-                  Your unique value proposition and what sets you apart from competitors.
-                </p>
-              </div>
-
-              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                  What is your typical process?
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400">
-                  Explain your working process from initial contact to delivery.
-                </p>
-              </div>
-
-              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                  How long does a typical project take?
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400">
-                  Timeline expectations and what factors affect duration.
-                </p>
-              </div>
-
-              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                  Do you offer payment plans?
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400">
-                  Payment options, deposits, and billing information.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* CONTACT SECTION - How to reach you                           */}
-      {/* Prompt: "Update contact with email [email] and Calendly [url]"*/}
-      {/* ============================================================ */}
-      <section id="contact" className="relative py-20 bg-white dark:bg-slate-900 overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 right-0 -z-10 w-[500px] h-[500px] bg-blue-100/30 dark:bg-blue-900/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
-
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-4">
-              Let&apos;s Work Together
+          <div className="max-w-xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-6">
+              Get in Touch
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-              Ready to start your project? Get in touch and let&apos;s discuss how I can help.
+              Reach out to discuss your real estate needs.
             </p>
-
-            {/* Contact options */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a
-                href="mailto:john@email.com"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-lg shadow-blue-500/25"
-              >
-                <MailIcon className="w-5 h-5 mr-2" />
-                john@email.com
-              </a>
-              <a
-                href="/resume"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-xl transition-all"
-              >
-                View Digital Resume
-              </a>
-            </div>
-
-            {/* Social links */}
-            <div className="flex justify-center gap-4">
-              <a
-                href="https://linkedin.com/in/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn profile"
-                className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                <LinkedInIcon />
-              </a>
-              <a
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub profile"
-                className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                <GitHubIcon />
-              </a>
-              <a
-                href="https://twitter.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="X profile"
-                className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                <XTwitterIcon />
-              </a>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="flex items-center gap-3 text-lg text-slate-700 dark:text-slate-300">
+                <svg className="w-6 h-6 text-indigo-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                +1 (800) 555-0199
+              </div>
+              <div className="flex items-center gap-3 text-lg text-slate-700 dark:text-slate-300">
+                <svg className="w-6 h-6 text-teal-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                rodra@email.com
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+
+
       {/* ============================================================ */}
-      {/* FOOTER - Copyright and additional links                      */}
+      {/* FOOTER - Minimal Luxury Footer                               */}
       {/* ============================================================ */}
-      <footer className="py-8 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-sm text-slate-600 dark:text-slate-400">
-              © {new Date().getFullYear()} John Smith. All rights reserved.
-            </div>
-            <div className="flex items-center gap-6">
-              <a href="#" className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                Terms of Service
-              </a>
-            </div>
-          </div>
+      <footer className="py-8 bg-black dark:bg-black border-t border-slate-800 text-white">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <p className="text-sm">
+            © {new Date().getFullYear()} Rod Alvero. All rights reserved.
+          </p>
         </div>
       </footer>
     </main>

@@ -1,5 +1,5 @@
 // ============================================================
-// DIGITAL RESUME TEMPLATE
+// DIGITAL RESUME - Rod Alvero
 // ============================================================
 // Optimized for job seekers and career professionals
 // Focus: ATS-friendly, achievements, professional history
@@ -16,7 +16,7 @@ export default function ResumeTemplate() {
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-2 cursor-pointer">
             <span className="text-xl font-bold tracking-tight font-display text-slate-900 dark:text-white">
-              John Smith
+              Rod Alvero
             </span>
           </div>
           <div className="hidden md:flex items-center gap-8">
@@ -52,7 +52,7 @@ export default function ResumeTemplate() {
 
               <div className="flex-grow">
                 <h1 className="text-4xl md:text-5xl font-bold font-display tracking-tight text-slate-900 dark:text-white mb-2">
-                  John Smith
+                  Rod Alvero
                 </h1>
                 <p className="text-xl md:text-2xl text-blue-600 dark:text-blue-400 font-medium mb-4">
                   AI Orchestration Architect
@@ -71,7 +71,7 @@ export default function ResumeTemplate() {
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    john@email.com
+                    rodra@email.com
                   </div>
                   <div className="flex items-center gap-2">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -475,7 +475,7 @@ export default function ResumeTemplate() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-sm text-slate-600 dark:text-slate-400">
-              © {new Date().getFullYear()} John Smith. All rights reserved.
+              © {new Date().getFullYear()} Rod Alvero. All rights reserved.
             </div>
             <div className="flex gap-4">
               <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">

@@ -2,6 +2,21 @@
 
 @import "tailwindcss";
 
+:root {
+  --color-indigo-500: #6366F1;
+  --color-teal-400: #22D3EE;
+  --color-slate-950: #020617; /* Tailwind's slate-950 */
+  --color-slate-50: #f8fafc; /* Tailwind's slate-50 */
+}
+.dark {
+  --color-background: var(--color-slate-950);
+  --color-text: var(--color-slate-50);
+}
+:not(.dark) {
+  --color-background: var(--color-slate-50);
+  --color-text: var(--color-slate-950);
+}
+
 /* Base styles */
 * {
   border-color: theme(colors.slate.200);
@@ -13,13 +28,9 @@
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: theme(colors.slate.50);
-  color: theme(colors.slate.900);
 }
 
 .dark body {
-  background-color: theme(colors.slate.900);
-  color: theme(colors.slate.50);
 }
 
 .font-display {
@@ -54,6 +65,47 @@ html {
 
 .animate-fade-up {
   animation: fade-up 0.5s ease-out forwards;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.25, 1);
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+body {
+  /* ... other styles ... */
+  background: linear-gradient(-45deg, var(--color-indigo-500), var(--color-teal-400), var(--color-background));
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+.dark body {
+  background: linear-gradient(-45deg, var(--color-indigo-500), var(--color-teal-400), var(--color-background));
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
 }
 
 /* Blur gradient backgrounds */

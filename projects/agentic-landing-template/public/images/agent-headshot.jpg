@@ -1,0 +1,6 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="400" fill="#AAAAAA"/>
+<circle cx="200" cy="150" r="80" fill="#CCCCCC"/>
+<ellipse cx="200" cy="350" rx="150" ry="80" fill="#CCCCCC"/>
+<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="36" fill="#000000">Rod Alvero</text>
+</svg>
