@@ -19,7 +19,7 @@ Agent behavioral rules for Solo Unicorn Builder. This file is for AI coding agen
 - `my_knowledge/` is **personal/private context**. Use it as context to create projects or generate documents. This is the user's knowledge base — information collected from the Internet, LLMs, lectures, news, original ideas, inspiration, career materials, and resumes. It is git-ignored via the `my_*` wildcard and should never be checked into the Unicorn repo. **Users should create a separate git repo inside this folder** (`cd my_knowledge && git init`) to track their own changes independently.
 - `template_projects/` ships with starter/example projects (e.g., `landing-page`). Users copy or reference these as starting points for their own work in `my_projects/`.
 - `my_projects/` is where **code changes happen**. All implementation work targets a sub-project here. Like `my_knowledge/`, it is git-ignored via the `my_*` wildcard. **Users should create a separate git repo inside each project** for version control of their own work.
-- `skills/` contains agent-agnostic prompting patterns (36 skills).
+- `skills/` contains agent-agnostic prompting patterns (37 skills).
 
 
 ## 2. Software Creation Rules
@@ -42,14 +42,14 @@ The project uses an "Office" metaphor. Each role maps to agent skills in `skills
 | CFO | Financial / cost analysis | `aws-cli-architect`, `gcloud-expert`, `finance-accounting`, `fundraising`, `business-model`, `document-creation` |
 | CTO | Tech architecture & dev | `aws-cli-architect`, `gcloud-expert`, `multi-file-architecture`, `test-first-development`, `context-aware-debugging`, `frontend-ui-ux`, `git-expert`, `github-cli`, `github-actions`, `docker-expert`, `python-dependency-expert`, `mcp-builder`, `webapp-testing`, `skill-creator` |
 | CSO | Security | `context-aware-debugging`, `legal-compliance` |
-| CMO | Marketing & branding | `marketing-brand`, `go-to-market`, `growth-analytics`, `pm-design-thinking`, `generative-art`, `document-creation` |
+| CMO | Marketing & branding | `marketing-brand`, `go-to-market`, `growth-analytics`, `pm-design-thinking`, `generative-art`, `document-creation`, `video-narrative-architect` |
 | CRO | Revenue & sales | `sales`, `go-to-market`, `business-model`, `growth-analytics`, `business-development`, `document-creation` |
 | CPO | Product definition | `product`, `idea-validation`, `pm-design-thinking`, `test-first-development`, `frontend-ui-ux` |
 | CCO | Customer experience | `customer-success`, `pm-design-thinking`, `growth-analytics` |
 | COO | Operations & people | `operations`, `finance-accounting`, `obsidian-knowledge`, `career-resume`, `github-profile`, `portfolio-strategy`, `open-source-contribution`, `technical-writing`, `document-creation` |
 | CLO | Legal & compliance | `legal-compliance` |
 
-**All 36 skills mapped.** Every skill in `skills/` has at least one Office owner.
+**All 37 skills mapped.** Every skill in `skills/` has at least one Office owner.
 
 ## 4. First-Time Setup
 
@@ -109,7 +109,7 @@ docker compose run --rm --no-deps dev sh -c "gh pr list"
 | `my_knowledge/` | Personal vault — ideas, resume, career materials (git-ignored) |
 | `template_projects/` | Starter/example projects shipped with Solo Unicorn |
 | `my_projects/` | User's own projects — all code changes happen here |
-| `skills/` | Canonical agent skill definitions (36 skills) |
+| `skills/` | Canonical agent skill definitions (37 skills) |
 
 ## 8. Troubleshooting
 

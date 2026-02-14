@@ -1,13 +1,13 @@
 ---
 name: solo-unicorn-builder
-description: Free, open-source AI command center for engineers who've never shipped end-to-end. 36 AI-powered skills spanning engineering, product, marketing, sales, finance, and operations — AI fills the gaps between your specialty and everything else it takes to go from requirement to production.
+description: Free, open-source AI command center for engineers who've never shipped end-to-end. 37 AI-powered skills spanning engineering, product, marketing, sales, finance, and operations — AI fills the gaps between your specialty and everything else it takes to go from requirement to production.
 ---
 
 # Solo Unicorn Builder
 
 **You're great at your specialty. But you've never shipped an application end-to-end — because someone else always handled the parts outside your lane.**
 
-Solo Unicorn Builder is a free, open-source command center that gives you 36 AI-powered skills — spanning engineering, product, marketing, sales, finance, legal, and operations. AI fills the gaps between your expertise and everything else it takes to go from requirement to production.
+Solo Unicorn Builder is a free, open-source command center that gives you 37 AI-powered skills — spanning engineering, product, marketing, sales, finance, legal, and operations. AI fills the gaps between your expertise and everything else it takes to go from requirement to production.
 
 ## Who This Is For
 
@@ -19,7 +19,7 @@ Solo Unicorn Builder fills that gap with AI. You bring the expertise in your dom
 
 ## Your AI-Augmented Team
 
-The 36 skills are organized as an "Office" — each role is an AI-powered expert you can call on:
+The 37 skills are organized as an "Office" — each role is an AI-powered expert you can call on:
 
 | Role | What it does for you | Example skills |
 |------|---------------------|----------------|
@@ -30,7 +30,7 @@ The 36 skills are organized as an "Office" — each role is an AI-powered expert
 | **CFO** | Manage costs, plan finances | `finance-accounting`, `fundraising`, `aws-cli-architect` |
 | **COO** | Run operations, build your career | `operations`, `career-resume`, `portfolio-strategy`, `document-creation` |
 
-You don't need to hire a team. You need to ask the right questions — and let AI handle the execution. [Full list of 36 skills →](docs/skills-reference.md)
+You don't need to hire a team. You need to ask the right questions — and let AI handle the execution. [Full list of 37 skills →](docs/skills-reference.md)
 
 ## Why This Exists
 
@@ -40,13 +40,13 @@ Here's the real problem:
 - **AI can fill the gaps — but only with structure.** A chatbot can answer questions. It can't guide you through a product launch, a deployment pipeline, or a fundraising round — unless it has a framework for each one.
 - **Your thinking is scattered.** A thread in ChatGPT, a conversation in Claude, notes in one app, code in another. Nothing connects.
 
-Solo Unicorn Builder gives you 36 structured skills, a knowledge vault, and a project workspace — so AI can operate as your team across every function you've never done before.
+Solo Unicorn Builder gives you 37 structured skills, a knowledge vault, and a project workspace — so AI can operate as your team across every function you've never done before.
 
 ## What You Get
 
 When you clone this project, you get:
 
-- **36 AI-powered skills** — Not just coding. Product development, sales, marketing, legal, finance, operations, and more. Just describe what you need and the AI applies the right expertise. [Full list →](docs/skills-reference.md)
+- **37 AI-powered skills** — Not just coding. Product development, sales, marketing, legal, finance, operations, and more. Just describe what you need and the AI applies the right expertise. [Full list →](docs/skills-reference.md)
 - **A private knowledge vault** — Your ideas, notes, goals, technical decisions, and learning in one place. Never checked into the public repo. Ships with `template_knowledge/` as a starter — copied to your private `my_knowledge/` on init.
 - **Starter projects you can build on** — `template_projects/` ships with example projects (like the landing page template) so you're not starting from zero. Your own work lives in `my_projects/` — build and ship real projects with AI-assisted workflows. A "project" can be anything: a blog post, a marketing research brief, a deployed web application, or an automated workflow.
 - **AI agent vendor-agnostic** — Works with any CLI coding agent: Claude Code, Gemini CLI, Kiro CLI, Codex CLI, OpenCode, or any tool that reads markdown. No vendor lock-in. [Compare agents →](docs/coding-agents.md)
@@ -95,7 +95,7 @@ This is a community project. If you've solved a real problem for real people, pa
 
 ## Learn More
 
-- [Skills Reference](docs/skills-reference.md) — All 36 skills, organized by stage and category
+- [Skills Reference](docs/skills-reference.md) — All 37 skills, organized by stage and category
 - [Coding Agents](docs/coding-agents.md) — Compare Claude Code, Gemini CLI, Kiro CLI, OpenCode, and more
 - [Philosophy](docs/philosophy.md) — The Ask, Listen, Do framework
 - [Contributing](docs/contributing.md) — How to add your own skills

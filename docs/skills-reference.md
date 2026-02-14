@@ -1,11 +1,11 @@
 ---
 name: skills-reference
-description: Complete reference for all 36 Solo Unicorn Builder skills, organized by stage and category.
+description: Complete reference for all 37 Solo Unicorn Builder skills, organized by stage and category.
 ---
 
 # Skills Reference
 
-Solo Unicorn Builder comes with 36 built-in skills. Each skill is an AI-powered guide that helps you with a specific task — like having an expert on call.
+Solo Unicorn Builder comes with 37 built-in skills. Each skill is an AI-powered guide that helps you with a specific task — like having an expert on call.
 
 You don't need all of them. You need the right one for where you are right now.
 
@@ -20,6 +20,7 @@ You don't need all of them. You need the right one for where you are right now.
 | Running a business | "I need to operate and scale" | `legal-compliance`, `finance-accounting`, `operations`, `fundraising` |
 | Building and shipping | "I need to make this real" | `multi-file-architecture`, `test-first-development`, `context-aware-debugging`, `frontend-ui-ux`, `git-expert`, `github-cli`, `github-actions`, `docker-expert`, `python-dependency-expert`, `aws-cli-architect`, `gcloud-expert`, `mcp-builder`, `webapp-testing` |
 | Creating documents & visuals | "I need polished deliverables" | `document-creation`, `generative-art` |
+| Video post-production | "I need to cull my A-Roll from raw footage" | `video-narrative-architect` |
 | Contributing to open source | "I want to build credibility" | `open-source-contribution`, `technical-writing` |
 | Managing your knowledge | "I need to organize my thinking" | `obsidian-knowledge` |
 | Extending the platform | "I want to create new skills" | `skill-creator` |
@@ -34,6 +35,7 @@ You don't need all of them. You need the right one for where you are right now.
 | **Business Operations** | `legal-compliance`, `finance-accounting`, `operations`, `fundraising` | Handle legal, finances, operations, and fundraising |
 | **Building & Shipping** | `multi-file-architecture`, `test-first-development`, `context-aware-debugging`, `frontend-ui-ux`, `git-expert`, `github-cli`, `github-actions`, `docker-expert`, `python-dependency-expert`, `aws-cli-architect`, `gcloud-expert`, `mcp-builder`, `webapp-testing` | Code, test, build UIs, containerize, deploy, build MCP integrations, and manage infrastructure |
 | **Documents & Visuals** | `document-creation`, `generative-art` | Create Word docs, PDFs, presentations, spreadsheets, and algorithmic art |
+| **Video Production** | `video-narrative-architect` | A-Roll culling, semantic transcript analysis, EDL generation |
 | **Open Source & Docs** | `open-source-contribution`, `technical-writing` | Contribute to projects, write clear documentation |
 | **Knowledge Management** | `obsidian-knowledge` | Manage your private knowledge vault |
 | **Platform** | `skill-creator` | Create and extend Solo Unicorn Builder skills |
@@ -55,5 +57,7 @@ You don't need to memorize skill names. Just describe what you need:
 - "Create a pitch deck as a PowerPoint" → uses `document-creation`
 - "Create generative art inspired by ocean waves" → uses `generative-art`
 - "Help me create a new skill for database management" → uses `skill-creator`
+- "Cull the A-Roll from this interview transcript" → uses `video-narrative-architect`
+- "Generate an EDL from this SRT file" → uses `video-narrative-architect`
 
 The AI figures out which skill to use based on what you ask.
