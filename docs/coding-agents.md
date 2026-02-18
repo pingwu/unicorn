@@ -67,13 +67,13 @@ Think of an AI coding agent as a **smart assistant that helps you write, edit, a
 
 These agents run in your terminal and can **read, write, and execute** — the full development loop.
 
-| Agent            | Provider    | Installation                                                                      | Start Command | Key Strength                                                                                                                    |
-| ---------------- | ----------- | --------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **Claude Code**  | Anthropic   | `npm install -g @anthropic-ai/claude-code`                                        | `claude`      | **Best reasoning and code quality.** Deep project understanding, multi-file refactoring, architecture decisions.                |
-| **Gemini CLI**   | Google      | `npm install -g @google/gemini-cli`                                               | `gemini`      | **Largest context window (1M+ tokens).** Multimodal — understands images, diagrams, screenshots alongside code.                 |
-| **Kiro CLI**     | AWS         | See [kiro.dev/cli](https://kiro.dev/cli/)                                         | `kiro`        | **Spec-driven development.** Turns prompts into structured requirements, then code. Deep AWS integration and DevOps automation. |
-| **Codex CLI**    | OpenAI      | `npm install -g @openai/codex`                                                    | `codex`       | **OpenAI ecosystem.** Quick code generation, integrates with ChatGPT.                                                           |
-| **OpenCode**     | Open Source | `brew install opencode-ai/tap/opencode` or see [opencode.ai](https://opencode.ai) | `opencode`    | **75+ model support.** Works with Claude, OpenAI, Gemini, and local models. Go-based TUI, LSP integration, vim-like editor.     |
+| Agent           | Provider    | Installation                                                                      | Start Command | Key Strength                                                                                                                    |
+| --------------- | ----------- | --------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Claude Code** | Anthropic   | `npm install -g @anthropic-ai/claude-code`                                        | `claude`      | **Best reasoning and code quality.** Deep project understanding, multi-file refactoring, architecture decisions.                |
+| **Gemini CLI**  | Google      | `npm install -g @google/gemini-cli`                                               | `gemini`      | **Largest context window (1M+ tokens).** Multimodal — understands images, diagrams, screenshots alongside code.                 |
+| **Kiro CLI**    | AWS         | See [kiro.dev/cli](https://kiro.dev/cli/)                                         | `kiro-cli`    | **Spec-driven development.** Turns prompts into structured requirements, then code. Deep AWS integration and DevOps automation. |
+| **Codex CLI**   | OpenAI      | `npm install -g @openai/codex`                                                    | `codex`       | **OpenAI ecosystem.** Quick code generation, integrates with ChatGPT.                                                           |
+| **OpenCode**    | Open Source | `brew install opencode-ai/tap/opencode` or see [opencode.ai](https://opencode.ai) | `opencode`    | **75+ model support.** Works with Claude, OpenAI, Gemini, and local models. Go-based TUI, LSP integration, vim-like editor.     |
 
 ### What CLI Agents Can Do That IDE Agents Can't
 

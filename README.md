@@ -91,6 +91,24 @@ Solo Unicorn Builder meets you where you are — and scales with you.
 | **Growing** | "I need to understand the business side" | Revenue models, partnerships, legal, finance, operations |
 | **Getting hired** | "I want to prove I can build end-to-end with AI" | Portfolio projects, resume tailoring, GitHub presence |
 
+## Context Engineering in Practice
+
+The industry calls it **context engineering.** We've been doing it since before the term existed.
+
+When you use ChatGPT or Claude through their web apps, your thinking is scattered across chat threads locked in a vendor's data center. Switch providers, and you start from zero. Solo Unicorn Builder takes the opposite approach: **your context is your codebase.** Local markdown files, version-controlled, searchable, portable, and yours.
+
+Three layers make this work:
+
+- **Skills** (`skills/`) — 36 structured prompting patterns that give the AI domain expertise
+- **Instructions** (`CLAUDE.md` → `UNICORN_CONSTITUTION.md`) — cascading rules that shape agent behavior
+- **Knowledge** (`my_knowledge/`) — your daily writing, research, ideas, and goals — the layer only you can build
+
+The knowledge layer is the foundation. A daily practice of collecting thoughts, capturing external knowledge, and organizing it into folders that form a personal knowledge graph. Over time, the AI doesn't just answer questions — it reasons about *your* specific situation, because your accumulated context is always available.
+
+Because your context is plain files — not locked inside any vendor — you can run the same knowledge, the same skills, and the same instructions through different models. Ask Claude Code to architect a feature, then ask Gemini CLI to review it, then ask Kiro CLI to deploy it. Each model brings different strengths and different blind spots. Same context, multiple perspectives. That's something you can't do when your history is trapped in a single provider's chat threads.
+
+This is the same practice the author used to write *[Just Ask](https://www.ping-ai.com)* — a business novel where the protagonist discovers that **the technology is never the variable; the context is.** [Read the full story →](docs/context-engineering.md)
+
 ## The Things AI Can't Do for You
 
 1. **Ask your Why** — What is your core value? What are your ultimate goals?
@@ -108,6 +126,7 @@ This is a community project. If you've solved a real problem for real people, pa
 - [Prerequisites](PREREQUISITES.md) — Tools you need (or just use Docker)
 - [Skills Reference](docs/skills-reference.md) — All 36 skills, organized by stage and category
 - [Coding Agents](docs/coding-agents.md) — Compare Claude Code, Gemini CLI, Kiro CLI, OpenCode, and more
+- [Context Engineering](docs/context-engineering.md) — Why your context shouldn't live in a vendor's data center
 - [Philosophy](docs/philosophy.md) — The Ask, Listen, Do framework
 - [Contributing](docs/contributing.md) — How to add your own skills
 - [PING BOS on YouTube](https://www.youtube.com/@pingbos) — Tutorials and walkthroughs
